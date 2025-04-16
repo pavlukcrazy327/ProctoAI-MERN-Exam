@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 import connectDB from "./config/db.js";
 import cookieParser from "cookie-parser";
@@ -9,11 +10,14 @@ dotenv.config();
 connectDB();
 const app = express();
 const port = process.env.PORT || 5000;
-
+const corsOptions = {
+  origin: 'http://localhost:3000'
+}
 // to parse req boy
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(cors(corsOptions));
 
 // Routes
 app.use("/api/users", userRoutes);
