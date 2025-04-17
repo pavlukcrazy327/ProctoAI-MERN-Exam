@@ -11,8 +11,8 @@ connectDB();
 const app = express();
 const port = process.env.PORT || 5000;
 const corsOptions = {
-  // origin: 'https://proctoai-mern-exam-frontend.onrender.com'
-  origin: 'https://localhost:3000'
+  origin: 'https://proctoai-mern-exam-frontend.onrender.com'
+  // origin: 'https://localhost:3000'
 }
 // to parse req boy
 app.use(express.json());
