@@ -52,6 +52,7 @@ const TestPage = () => {
   }, [data]);
 
   const handleTestSubmission = async () => {
+    console.log('HandleTestSubmission');
     try {
       setCheatingLog((prevLog) => ({
         ...prevLog,
