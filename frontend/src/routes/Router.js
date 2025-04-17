@@ -38,7 +38,7 @@ const Router = createBrowserRouter(
   createRoutesFromElements(
     // Every router we create will now go in here as
     // they going to be child of our main App component
-    <BrowserRouter>
+    <>
       {/* // Private Routes */}
       <Route path="" element={<PrivateRoute />}>
         {/* // Main layout */}
@@ -73,7 +73,7 @@ const Router = createBrowserRouter(
         <Route path="/auth/login" element={<Login />} />
         {/* <Route path="*" element={<Navigate to="/auth/404" />} /> */}
       </Route>
-    </BrowserRouter>,
+    </>,
   ),
 );
 
