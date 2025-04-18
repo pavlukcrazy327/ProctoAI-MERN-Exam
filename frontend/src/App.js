@@ -3,7 +3,11 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import { baselightTheme } from './theme/DefaultColors';
 // Router Provider
 import { RouterProvider, useRoutes } from 'react-router-dom';
-import Router from './routes/Router';
+// import Router from './routes/Router';
+import { Navigate, BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './test/Homepage';
+import AboutPage from './test/Aboutus';
+import New from './test/new';
 
 // Redux Provider
 import { Provider } from 'react-redux';
@@ -21,7 +25,17 @@ function App() {
         <ToastContainer />
         <CssBaseline />
         {/* {routing} */}
-        <RouterProvider router={Router} />
+        {/* <RouterProvider router={Router} /> */}
+        <Router>
+          <nav>
+            <a href="/">Home</a> | <a href="/about">About</a> | <a href="/new">New</a>
+          </nav>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/new" element={<New />} />
+          </Routes>
+        </Router>
       </Provider>
     </ThemeProvider>
   );
