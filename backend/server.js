@@ -10,9 +10,9 @@ dotenv.config();
 connectDB();
 const app = express();
 const port = process.env.PORT || 5000;
-const backendcors = process.env.BACKENDCORS;
+// const backendcors = process.env.BACKENDCORS;
 const corsOptions = {
-  origin: backendcors
+  origin: process.env.CORS_ALLOW_ORIGINS.split(',')
   // origin: 'https://proctoai-mern-exam-frontend.onrender.com'
   // origin: 'https://localhost:3000'
 }
@@ -50,7 +50,7 @@ app.use(errorHandler);
 
 // Server
 app.listen(port, () => {
-  console.log(`server is running:cors = ${backendcors}`);
+  console.log(`server is running:cors = ${process.env.CORS_ALLOW_ORIGINS}`);
 });
 
 // Todos:
