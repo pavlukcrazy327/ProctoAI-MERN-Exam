@@ -18,13 +18,15 @@ const Success = Loadable(lazy(() => import('../views/Success')));
 //Student Routes
 
 const TestPage = Loadable(lazy(() => import('./../views/student/TestPage')));
-const ExamPage = Loadable(lazy(() => import('./../views/student/ExamPage')));
+// const ExamPage = Loadable(lazy(() => import('./../views/student/ExamPage')));
 const ExamDetails = Loadable(lazy(() => import('./../views/student/ExamDetails')));
-const ResultPage = Loadable(lazy(() => import('./../views/student/ResultPage')));
+// const ResultPage = Loadable(lazy(() => import('./../views/student/ResultPage')));
+import ExamPage from 'src/views/student/ExamPage';
+import ResultPage from 'src/views/student/ResultPage';
 //Auth Routes
 const Error = Loadable(lazy(() => import('../views/authentication/Error')));
-const Register = import('../views/authentication/Register');
-const Login = import('../views/authentication/Login');
+const Register = Loadable(lazy(() => import('../views/authentication/Register')));
+const Login = Loadable(lazy(() => import('../views/authentication/Login')));
 const UserAccount = Loadable(lazy(() => import('../views/authentication/UserAccount')));
 
 // Teacher Routes
