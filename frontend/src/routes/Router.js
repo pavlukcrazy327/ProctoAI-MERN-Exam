@@ -1,5 +1,5 @@
 import React, { lazy } from 'react';
-import { Navigate, Route, createBrowserRouter, createRoutesFromElements, Router, BrowserRouter } from 'react-router-dom';
+import { Navigate, createBrowserRouter, createRoutesFromElements, BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Loadable from '../layouts/full/shared/loadable/Loadable';
 import { useSelector } from 'react-redux';
 
