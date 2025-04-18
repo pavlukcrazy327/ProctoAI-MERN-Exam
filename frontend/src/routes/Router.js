@@ -1,5 +1,5 @@
 import React, { lazy } from 'react';
-import { Navigate, Route, createBrowserRouter, createRoutesFromElements, BrowserRouter } from 'react-router-dom';
+import { Navigate, Route, createBrowserRouter, createRoutesFromElements, Router, BrowserRouter } from 'react-router-dom';
 import Loadable from '../layouts/full/shared/loadable/Loadable';
 import { useSelector } from 'react-redux';
 
@@ -39,11 +39,14 @@ const AddQuestions = Loadable(lazy(() => import('./../views/teacher/AddQuestions
 // const PrivateRoute = Loadable(lazy(() => import('src/views/authentication/PrivateRoute')));
 const TeacherRoute = Loadable(lazy(() => import('src/views/authentication/TeacherRoute')));
 
-const Router = createBrowserRouter(
-  createRoutesFromElements(
+// const Router = createBrowserRouter(
+//   createRoutesFromElements(
     // Every router we create will now go in here as
     // they going to be child of our main App component
-    <>
+const MERNRouter = () => {
+  return (
+    <Router>
+      <Routes>
       {/* // Private Routes */}
       <Route path="" element={<PrivateRoute />}>
         {/* // Main layout */}
@@ -78,8 +81,10 @@ const Router = createBrowserRouter(
         <Route path="/auth/login" element={<Login />} />
         {/* <Route path="*" element={<Navigate to="/auth/404" />} /> */}
       </Route>
-    </>,
-  ),
-);
+      </Routes>
+    </Router>
+  )
+}
+// );
 
-export default Router;
+export default MERNRouter;
