@@ -5,9 +5,11 @@ import { useSelector } from 'react-redux';
 
 import ExamPage from 'src/views/student/ExamPage';
 import ResultPage from 'src/views/student/ResultPage';
+import PrivateRoute from 'src/views/authentication/PrivateRoute';
+import FullLayout from '../layouts/full/FullLayout';
 /* ***Layouts**** */
 const BlankLayout = Loadable(lazy(() => import('../layouts/blank/BlankLayout')));
-const FullLayout = Loadable(lazy(() => import('../layouts/full/FullLayout')));
+// const FullLayout = Loadable(lazy(() => import('../layouts/full/FullLayout')));
 const ExamLayout = Loadable(lazy(() => import('../layouts/full/ExamLayout')));
 
 /* ****Pages***** */
@@ -34,7 +36,7 @@ const UserAccount = Loadable(lazy(() => import('../views/authentication/UserAcco
 const CreateExamPage = Loadable(lazy(() => import('./../views/teacher/CreateExamPage')));
 const ExamLogPage = Loadable(lazy(() => import('./../views/teacher/ExamLogPage')));
 const AddQuestions = Loadable(lazy(() => import('./../views/teacher/AddQuestions')));
-const PrivateRoute = Loadable(lazy(() => import('src/views/authentication/PrivateRoute')));
+// const PrivateRoute = Loadable(lazy(() => import('src/views/authentication/PrivateRoute')));
 const TeacherRoute = Loadable(lazy(() => import('src/views/authentication/TeacherRoute')));
 
 const Router = createBrowserRouter(
