@@ -3,6 +3,8 @@ import { Navigate, Route, createBrowserRouter, createRoutesFromElements, Browser
 import Loadable from '../layouts/full/shared/loadable/Loadable';
 import { useSelector } from 'react-redux';
 
+import ExamPage from 'src/views/student/ExamPage';
+import ResultPage from 'src/views/student/ResultPage';
 /* ***Layouts**** */
 const BlankLayout = Loadable(lazy(() => import('../layouts/blank/BlankLayout')));
 const FullLayout = Loadable(lazy(() => import('../layouts/full/FullLayout')));
@@ -21,8 +23,7 @@ const TestPage = Loadable(lazy(() => import('./../views/student/TestPage')));
 // const ExamPage = Loadable(lazy(() => import('./../views/student/ExamPage')));
 const ExamDetails = Loadable(lazy(() => import('./../views/student/ExamDetails')));
 // const ResultPage = Loadable(lazy(() => import('./../views/student/ResultPage')));
-import ExamPage from 'src/views/student/ExamPage';
-import ResultPage from 'src/views/student/ResultPage';
+
 //Auth Routes
 const Error = Loadable(lazy(() => import('../views/authentication/Error')));
 const Register = Loadable(lazy(() => import('../views/authentication/Register')));
