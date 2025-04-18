@@ -49,7 +49,7 @@ app.use(errorHandler);
 
 // Server
 app.listen(port, () => {
-  console.log(`server is running:cors = ${process.env.BACKENDROS}`);
+  console.log(`server is running:cors = ${process.env.BACKENDCORS}`);
 });
 
 // Todos:
